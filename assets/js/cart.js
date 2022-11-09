@@ -19,15 +19,15 @@ const db = [
   },
   {
     id: 3,
-    name: 'SAMSUNG Galaxy A23 128GB',
+    name: 'Samsung Galaxy A23 128GB',
     price: 874900,
     image: 'assets/img/celular3.webp',
     category: 'samsung',
-    quantity: 6
+    quantity: 10
   },
   {
     id: 4,
-    name: 'MOTOROLA Moto G20 128GB',
+    name: 'Motorola Moto G20 128GB',
     price: 619900,
     image: 'assets/img/celular4.png',
     category: 'motorola',
@@ -39,13 +39,16 @@ const products = window.localStorage.getItem('productsDB') ? JSON.parse(window.l
 
 // #2 Pintar los productos en el DOM
 const productContainer = document.getElementById('products__content')
+const productsFilters = document.querySelector('.products__stock')
+
+
 
 function printProducts() {
-  let html = ''
+  let html = ''  
 
   for (let product of products) {
     html += `
-    <article class="products__card hoodies">
+    <article class="products__card ${product.category}">
     <div class="products__shape">
       <img src="${product.image}" alt="${product.name}" class="products__img">
     </div>
@@ -62,6 +65,8 @@ function printProducts() {
     </div>
   </article>`
   }
+
+  
 
   productContainer.innerHTML = html
   window.localStorage.setItem('productsDB', JSON.stringify(products))
