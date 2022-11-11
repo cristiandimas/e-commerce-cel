@@ -4,7 +4,7 @@
   max-width: 120em;  
   padding: 1em;
   
-  margin: 40px auto 0;
+  margin: 50px auto 0;
   overflow: hidden; 
   
   
@@ -19,11 +19,14 @@
   padding: 1em ;
   transition: all 1.9s ease;
   transform: translateX(0%);
+  
 }
 
 .carrusel .img{
   width: calc(100%/7 - 3em);
   max-height: 40vh;
+ border-radius: 8px;
+ box-shadow: 0 23px 8px hsla(0, 4%, 15%, .10);
 }
 .carrusel .puntos{
   list-style: none;

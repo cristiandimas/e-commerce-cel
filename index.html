@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Academlo Shop</title>
   <!--=============== FAVICON ===============-->
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/img/devil68.svg" type="image/x-icon">
   <!--=============== BOXICONS ===============-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
   <!--=============== CSS ===============-->
@@ -140,11 +140,14 @@
     <!--==================== HOME ====================-->
     <section class="carrusel">      
         <div class="grande">
-          <img src="assets/img/anuncio1.png" alt="imagen" class="img">
+                  
+              <img src="assets/img/anuncio1.png" alt="imagen" class="img">
+         
+          
           <img src="assets/img/anuncio2.webp" alt="imagen" class="img">
           <img src="assets/img/anuncio3.jpg" alt="imagen" class="img">
           <img src="assets/img/anuncio4.jpg" alt="imagen" class="img">
-          <img src="assets/img/anuncio5.webp" alt="imagen" class="img">
+          <img src="assets/img/anuncio5.png" alt="imagen" class="img">
           <img src="assets/img/anuncio6.jpg" alt="imagen" class="img">
           <img src="assets/img/anuncio7.webp" alt="imagen" class="img">
     
@@ -164,16 +167,21 @@
     <!--==================== PRODUCTS ====================-->
     <section class="products" id="products">
       <div class="products__container container">
+        <ul class="ul__filter-total products__filters">
+          <li class="products__item " data-filter="all"></li>
+          <h3 class="products__title">
+            Mostrar todo
+          </h3>
+          <span class="products__stock">
+            Mostrar todos los productos
+          </span>
+        </li>
+        </ul>
+        
         <ul class="products__filters">
-          <li class="products__item products__line" data-filter="all">
-            <h3 class="products__title">
-              Mostrar todo
-            </h3>
-            <span class="products__stock">
-              Mostrar todos los productos
-            </span>
-          </li>
+        <div class="filter__div">
 
+          
           <li class="products__item products__line active-product" data-filter=".xiaomi">
             <h3 class="products__title">
               Xiaomi
@@ -208,6 +216,7 @@
               4 productos
             </span>
           </li>
+        </div>
         </ul>
 
         <div class="products__content grid" id="products__content">
@@ -254,14 +263,11 @@
 
         <ul class="footer__links">
           <li>
-            <a href="#" class="footer__link">Camisas</a>
+            <a href="#" class="footer__link">Android</a>
           </li>
           <li>
-            <a href="#" class="footer__link">Playeras</a>
-          </li>
-          <li>
-            <a href="#" class="footer__link">Sudaderas</a>
-          </li>
+            <a href="#" class="footer__link">IOS</a>
+          </li> 
         </ul>
       </div>
 

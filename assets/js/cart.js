@@ -36,11 +36,40 @@ const db = [
 ]
 
 const products = window.localStorage.getItem('productsDB') ? JSON.parse(window.localStorage.getItem('productsDB')) : db
+// const products =  db
 
 // #2 Pintar los productos en el DOM
 const productContainer = document.getElementById('products__content')
-const productsFilters = document.querySelector('.products__stock')
+const productsFilters = document.querySelector('.filter__div')
 
+// const ulFilter = document.querySelector('.ul__filter-total')
+// ulFilter.addEventListener('click',()=> {
+//        printProducts()
+// })    
+
+
+
+
+function printfilters() {
+  let html = ''  
+
+  for (let product of products) {
+    html += `
+    <li class="products__item products__line" data-filter=".${product.category}">
+    <h3 class="products__title">
+    ${product.category}
+    </h3>
+    <span class="products__stock">
+    ${product.quantity} productos
+    </span>
+  </li>`
+  }  
+
+  productsFilters.innerHTML = html
+  window.localStorage.setItem('productsDB', JSON.stringify(products))
+}
+
+printfilters()
 
 
 function printProducts() {
@@ -64,9 +93,7 @@ function printProducts() {
       </button>
     </div>
   </article>`
-  }
-
-  
+  }  
 
   productContainer.innerHTML = html
   window.localStorage.setItem('productsDB', JSON.stringify(products))
